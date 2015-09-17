@@ -91,7 +91,9 @@ module.exports = function(ferd) {
         sender = null;
 
       } else {
-        var text = '*Question #' + questionNumber + '*: \n\n*Hint*: ' + category + '\n\n' + question;
+        var text = '> *Question #' + questionNumber + '*: \n\n'
+                 + '> *Hint*: ' + category + '\n\n'
+                 + '> ' + question;
         if(sender) {
           var text = 'Correct! ' + sender.name + ' has earned ' + players[sender.name] + ' points.\n\n' + text;      
         }
